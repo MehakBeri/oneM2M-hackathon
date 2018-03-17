@@ -1,0 +1,126 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Mask IT
+   
+    // Bootstrap core CSS
+    link(href='/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='/css/full-slider.css', rel='stylesheet')
+  body
+    script.
+      setTimeout(function(){
+      window.location.reload(1);
+      }, 5000);
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='#') Mask IT
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href='#')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#data') Data
+            li.nav-item
+              a.nav-link(href='#') About
+            li.nav-item
+              a.nav-link(href='#') Services
+            li.nav-item
+              a.nav-link(href='#contact') Contact
+    header
+      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+        ol.carousel-indicators
+          li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+          li(data-target='#carouselExampleIndicators', data-slide-to='1')
+          li(data-target='#carouselExampleIndicators', data-slide-to='2')
+        .carousel-inner(role='listbox')
+          // Slide One - Set the background image for this slide in the line below
+          .carousel-item.active(style="background-image: url('/images/4.jpg')")
+            .carousel-caption.d-none.d-md-block
+              h1 Mask IT
+              h3 Intelligent Air Quality Detection
+          // Slide Two - Set the background image for this slide in the line below
+          .carousel-item(style="background-image: url('/images/2.png')")
+            .carousel-caption.align-middle
+              h1 Internet Of Things Backed
+              h3
+                | This revolutionary product displays real time data collected from various sensory devices
+          // Slide Three - Set the background image for this slide in the line below
+          .carousel-item(style="background-image: url('images/1.jpg')")
+            .carousel-caption.d-none.d-md-block
+              h1 Modeled using Machine Learning
+              h3
+                | Previous data used to model a perceptron based algorithm in machine learning to best classify newer data
+        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.sr-only Next
+    // Page Content
+    section.py-5
+      #data.container
+        h1 Data for Today: #{result}!
+        br
+        br
+        .row
+          .col-md-3.middle
+            .numberCircle #{NOX}
+            h3 NOX
+          .col-md-3.middle
+            .numberCircle #{NO2}
+            h3 NO2
+          .col-md-3.middle
+            .numberCircle #{O3}
+            h3 O3
+          .col-md-3.middle
+            .numberCircle #{l}
+            h3 Luminosity
+        br
+        br
+        br
+        .row
+          .col-md-6.middle
+            img(src='/images/water.png', height='160px', width='150px')
+            h3 Humidity: #{hu}%
+          .col-md-6.middle
+            img(src='/images/temp.jpg', height='160px', width='150px')
+            h3 Temperature: #{tem} deg
+        br
+        br
+        h1 Map
+        br
+        .middle.m
+           .map
+             img(src='/images/map.jpg')
+           .dot
+             img(src='#{im}')
+    // Footer
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    footer.py-5.bg-dark
+      #contact.container
+        h1.m-0.text-center.text-white Contact
+        h4.m-0.text-center.text-white Mehak Beri || Lucia Botiquin 
+        p.m-0.text-center.text-white mehak.beri@utdallas.edu
+        p.m-0.text-center.text-white lxb161630@utdallas.edu
+        p.m-0.text-center.text-white Copyright © Mask IT 2018
+      // /.container
+    // Bootstrap core JavaScript
+    script(src='/vendor/jquery/jquery.min.js')
+    script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
